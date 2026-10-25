@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Собрать и Подписать OpenHU (Release)",
+            "type": "shell",
+            "command": "./gradlew assembleRelease ; C:/Android-SDK/build-tools/34.0.0/apksigner.bat sign --ks ohu-release-key.jks --ks-key-alias ohu-alias app/build/outputs/apk/playstore/release/com.andrerinas.headunitrevived_4.0.0-alpha.apk",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
